@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --primary-teal-400: #4abfbd;
+  --primary-teal-500: #2ab3b1;
+  --primary-green-400: #c0df33;
+
+  --neutral-teal-100: #e6eff5;
+  --neutral-gray-500: #9aa7be;
+
+  --font-base: 16px;
+
+  --spacing-0: 0px;
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-500: 40px;
+
+  --box-shadow: 0 15px 30px 0 rgba(0, 81, 171, 0.15);
+}
+
+.text-preset-1 {
+  font-size: 32px;
+  line-height: 115%;
+  letter-spacing: -0.4px;
+}
+
+.text-preset-2 {
+  font-size: 24px;
+  line-height: 115%;
+  letter-spacing: -0.25px;
+}
+
+.text-preset-3 {
+  font-size: 18px;
+  line-height: 115%;
+  letter-spacing: -0.25px;
+}
+
+.text-preset-4-bold {
+  font-size: 16px;
+  line-height: 145%;
+  letter-spacing: -0.25px;
+  font-weight: 700;
+}
+
+.text-preset-4-regular {
+  font-size: 16px;
+  line-height: 165%;
+  letter-spacing: -0.5px;
+}
+
+.text-preset-5 {
+  font-size: 14px;
+  line-height: 145%;
+  letter-spacing: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  min-height: 100dvh;
+  background-color: var(--neutral-teal-100);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: var(--spacing-500);
+}
+
+main {
+  display: flex;
+  width: 635px;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+header,
+header div {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: white;
+  gap: var(--spacing-300);
+  padding: var(--spacing-500);
+
+  border-radius: 8px 8px 0 0;
+  box-shadow: var(--box-shadow);
+}
+
+header div {
+  gap: var(--spacing-100);
+}
+
+header h2 {
+  color: var(--primary-teal-500);
+}
+
+header div p.text-preset-3 {
+  color: var(--primary-green-400);
+}
+
+header div p.text-preset-4-regular {
+  color: var(--neutral-gray-500);
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+section div.subscription,
+section div.why-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--spacing-100);
+
+  color: white;
+
+  min-height: 260px;
+}
+
+section div.subscription {
+  border-radius: 0 0 0 8px;
+  background-color: var(--primary-teal-500);
+  box-shadow: var(--box-shadow);
+}
+
+section div.why-us {
+  border-radius: 0 0 8px 0;
+  background-color: var(--primary-teal-400);
+  box-shadow: var(--box-shadow);
+}
+
+.subscription-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 177px;
+}
+
+.subscription-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.subscription-price-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+}
+
+.subscription-price-container span {
+  opacity: 0.5;
+}
+
+.subscription button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-100);
+  border-radius: 5px;
+  background-color: var(--primary-green-400);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.why-us-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-200);
+}
+
+.why-us-details-container ul {
+  list-style-type: none;
+}
+
+.why-us-details-container li {
+  opacity: 0.75;
+}
+
+@media (max-width: 650px) {
+  main {
+    width: 311px;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  section div.subscription {
+    border-radius: 0 0 0 0;
+    box-shadow: var(--box-shadow);
+  }
+
+  section div.why-us {
+    border-radius: 0 0 8px 8px;
+    box-shadow: var(--box-shadow);
+  }
+}
