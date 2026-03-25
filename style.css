@@ -186,14 +186,13 @@ section .why-us {
   color: white;
   border: none;
   cursor: pointer;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  will-change: transform;
+  transition: transform 0.3s ease;
 }
 
 .subscription button:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.18);
+  transform: translateY(-0.125rem) scale(1.03);
+  box-shadow: 0 0.875rem 0.875rem 0 rgba(0, 0, 0, 0.18); /* optional stronger state */
 }
 
 .subscription button:focus-visible {
@@ -224,6 +223,11 @@ section .why-us {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.attribution a:focus-visible {
+  outline: 0.1875rem solid var(--primary-teal-500);
+  outline-offset: 0.125rem;
 }
 
 @media (max-width: 650px) {
