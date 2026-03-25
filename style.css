@@ -68,6 +68,7 @@ body {
   font-style: normal;
 
   min-height: 100dvh;
+  padding-block: 100px;
   background-color: var(--neutral-teal-100);
 
   display: flex;
@@ -187,6 +188,12 @@ section div.why-us {
   cursor: pointer;
 }
 
+.subscription button:hover {
+  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
 .why-us-details-container {
   display: flex;
   flex-direction: column;
@@ -200,6 +207,15 @@ section div.why-us {
 
 .why-us-details-container li {
   opacity: 0.75;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media (max-width: 650px) {
