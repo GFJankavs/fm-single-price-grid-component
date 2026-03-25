@@ -8,50 +8,50 @@
   --neutral-teal-100: #e6eff5;
   --neutral-gray-500: #9aa7be;
 
-  --spacing-0: 0px;
-  --spacing-100: 8px;
-  --spacing-200: 16px;
-  --spacing-300: 24px;
-  --spacing-500: 40px;
+  --spacing-0: 0rem;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-500: 2.5rem;
 
-  --box-shadow: 0 15px 30px 0 rgba(0, 81, 171, 0.15);
+  --box-shadow: 0 0.9375rem 1.875rem 0 rgba(0, 81, 171, 0.15);
 }
 
 .text-preset-1 {
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 115%;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.025rem;
 }
 
 .text-preset-2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 115%;
-  letter-spacing: -0.25px;
+  letter-spacing: -0.015625rem;
 }
 
 .text-preset-3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 115%;
-  letter-spacing: -0.25px;
+  letter-spacing: -0.015625rem;
 }
 
 .text-preset-4-bold {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 145%;
-  letter-spacing: -0.25px;
+  letter-spacing: -0.015625rem;
   font-weight: 700;
 }
 
 .text-preset-4-regular {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 165%;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.03125rem;
 }
 
 .text-preset-5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 145%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 * {
@@ -66,8 +66,8 @@ body {
   font-style: normal;
 
   min-height: 100dvh;
-  padding-block: 100px;
-  font-size: 16px;
+  padding-block: clamp(1.5rem, 6vh, 6.25rem);
+  font-size: 1rem;
   background-color: var(--neutral-teal-100);
 
   display: flex;
@@ -80,7 +80,7 @@ body {
 
 main {
   display: flex;
-  max-width: 635px;
+  max-width: 39.6875rem;
   width: 100%;
   flex-direction: column;
   flex-shrink: 0;
@@ -97,7 +97,7 @@ header {
   gap: var(--spacing-300);
   padding: var(--spacing-500);
 
-  border-radius: 8px 8px 0 0;
+  border-radius: var(--spacing-100) var(--spacing-100) 0 0;
   box-shadow: var(--box-shadow);
 }
 
@@ -132,17 +132,17 @@ section aside.why-us {
 
   color: white;
 
-  min-height: clamp(220px, 30vh, 320px);
+  min-height: clamp(13.75rem, 30vh, 20rem);
 }
 
 section div.subscription {
-  border-radius: 0 0 0 8px;
+  border-radius: 0 0 0 var(--spacing-100);
   background-color: var(--primary-teal-500);
   box-shadow: var(--box-shadow);
 }
 
 section aside.why-us {
-  border-radius: 0 0 8px 0;
+  border-radius: 0 0 var(--spacing-100) 0;
   background-color: var(--primary-teal-400);
   box-shadow: var(--box-shadow);
 }
@@ -151,7 +151,7 @@ section aside.why-us {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 177px;
+  min-height: 11.0625rem;
 }
 
 .subscription-info-container {
@@ -180,9 +180,9 @@ section aside.why-us {
   justify-content: center;
   align-items: center;
   padding: var(--spacing-100);
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background-color: var(--primary-green-400);
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.625rem 0.625rem 0 rgba(0, 0, 0, 0.1);
   color: white;
   border: none;
   cursor: pointer;
@@ -197,9 +197,12 @@ section aside.why-us {
 }
 
 .subscription button:focus-visible {
-  outline: 3px solid #fff; /* or a higher contrast color if needed */
   outline-offset: 2px;
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.45);
+}
+
+.subscription button:focus {
+  outline: 3px solid #fff;
 }
 
 .why-us-details-container {
@@ -218,7 +221,7 @@ section aside.why-us {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
 }
 
@@ -228,7 +231,7 @@ section aside.why-us {
 
 @media (max-width: 650px) {
   main {
-    width: 311px;
+    width: 19.4375rem;
   }
 
   section {
@@ -236,12 +239,12 @@ section aside.why-us {
   }
 
   section div.subscription {
-    border-radius: 0 0 0 0;
+    border-radius: 0;
     box-shadow: var(--box-shadow);
   }
 
-  section aside.why-us {
-    border-radius: 0 0 8px 8px;
+  section div.why-us {
+    border-radius: 0 0 var(--spacing-100) var(--spacing-100);
     box-shadow: var(--box-shadow);
   }
 }
